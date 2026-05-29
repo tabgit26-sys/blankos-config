@@ -46,6 +46,7 @@
       user.email = "tagbit26@gmail.com";
       init.defaultBranch = "main";
       pull.rebase = true;
+      credential.helper = "store";
     };
   };
 
