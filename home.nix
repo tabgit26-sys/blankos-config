@@ -42,8 +42,8 @@
   programs.git = {
     enable = true;
     settings = {
-      user.name = "BlanK";
-      user.email = "your@email.com";
+      user.name = "tagbit26-sys";
+      user.email = "tagbit26@gmail.com";
       init.defaultBranch = "main";
       pull.rebase = true;
     };
