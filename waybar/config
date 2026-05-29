@@ -1,0 +1,51 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["custom/performance", "temperature", "cpu", "memory", "battery", "backlight"],
+
+    "hyprland/workspaces": {
+        "format": "{id}",
+        "on-click": "activate"
+    },
+
+    "clock": {
+        "format": "{:%I:%M %p}",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+
+    "cpu": {
+        "format": "CPU {usage}%",
+        "interval": 2
+    },
+
+    "memory": {
+        "format": "RAM {percentage}%",
+        "interval": 2
+    },
+
+    "temperature": {
+        "format": "TEMP {temperatureC}°C",
+        "critical-threshold": 80
+    },
+
+    "battery": {
+        "format": "BAT {capacity}%",
+        "format-charging": "CHR {capacity}%",
+        "format-full": "FULL {capacity}%"
+    },
+
+    "backlight": {
+        "format": "BRI {percent}%",
+        "on-scroll-up": "brightnessctl set +5%",
+        "on-scroll-down": "brightnessctl set 5%-"
+    },
+    "custom/performance": {
+        "exec": "cat /tmp/performance-mode 2>/dev/null || echo '⚖ Balance'",
+        "interval": 2,
+        "on-click": "~/.config/waybar/scripts/perf-toggle.sh",
+        "tooltip": false
+    }
+}
