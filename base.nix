@@ -49,7 +49,7 @@
       mem  = "free -h";
       top  = "btop";
       diff = "diff --color=auto";
-      backup = "~/backup.sh";
+      backup = "~/Projects/scripts/backup.sh";
       # Profile switchers
       minimal = "home-manager switch --flake ~/.config/home-manager#blank-minimal";
       dev     = "home-manager switch --flake ~/.config/home-manager#blank-dev";
